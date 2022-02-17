@@ -22,7 +22,7 @@ public class CustomerController {
             @RequestParam(name = "course", required = false)String courseName
     ){
         if(courseName != null){
-            return new ResponseEntity(customerRepository.findByBookingCourseName(courseName), HttpStatus.OK);
+            return new ResponseEntity(customerRepository.findByBookingsCourseName(courseName), HttpStatus.OK);
         }
         return new ResponseEntity(customerRepository.findAll(), HttpStatus.OK);
     }
